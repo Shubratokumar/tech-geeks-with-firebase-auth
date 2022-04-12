@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { BlogContext } from "../../App";
 import "./BlogDetails.css";
@@ -9,7 +9,7 @@ const BlogDetails = () => {
   const navigate = useNavigate();
   // const [blog, setBlog] = useState({});
   const [blogs] = useContext(BlogContext);
-  const blog = blogs.find((blog) => blog._id == id);
+  const blog = blogs.find((blog) => blog._id === id);
 
   // useEffect(() => {
   //   fetch(`https://retro-tech-talks.herokuapp.com/getBlog/${id}`)
